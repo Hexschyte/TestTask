@@ -73,7 +73,6 @@ async function sendRequest(url, method, body = null) {
 
         await reloadTable();
         modal.hide();
-        //if (modal.hasClass('in')) { modal.hide() }
 
     } catch (error) {
         console.error('Unknown error: ', error);

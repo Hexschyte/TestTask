@@ -23,7 +23,7 @@ namespace TZ2.Controllers
             }
 
             var existingProductWithSameName = await _context.Product
-                .Where(p => p.Name == item.Name && p.Id != item.Id)  // Проверяем другие продукты с таким же именем
+                .Where(p => p.Name == item.Name && p.Id != item.Id)  
                 .FirstOrDefaultAsync();
 
             if (existingProductWithSameName != null)
@@ -74,7 +74,7 @@ namespace TZ2.Controllers
             }
 
             var existingProductWithSameName = await _context.Product
-                .Where(p => p.Name == item.Name && p.Id != item.Id)  // Проверяем другие продукты с таким же именем
+                .Where(p => p.Name == item.Name && p.Id != item.Id)
                 .FirstOrDefaultAsync();
 
             if (existingProductWithSameName != null)
@@ -86,7 +86,7 @@ namespace TZ2.Controllers
             target.Name = item.Name;
             target.Description = item.Description;
 
-            _context.Product.Update(target);  // Обновляем только найденный продукт
+            _context.Product.Update(target);
             await _context.SaveChangesAsync();
 
             return Ok("Product updated successfully.");

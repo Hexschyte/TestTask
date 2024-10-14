@@ -4045,11 +4045,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Program Files\\Soft\\Code\\C#\\TZ2\\TZ2.csproj",
+      "projectUniqueName": "C:\\Program Files\\Soft\\Git\\TZ2\\TZ2.csproj",
       "projectName": "TZ2",
-      "projectPath": "C:\\Program Files\\Soft\\Code\\C#\\TZ2\\TZ2.csproj",
+      "projectPath": "C:\\Program Files\\Soft\\Git\\TZ2\\TZ2.csproj",
       "packagesPath": "C:\\Users\\Holmes\\.nuget\\packages\\",
-      "outputPath": "C:\\Program Files\\Soft\\Code\\C#\\TZ2\\obj\\",
+      "outputPath": "C:\\Program Files\\Soft\\Git\\TZ2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
