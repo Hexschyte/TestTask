@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TZ2.Models.Product>
+
+<h2>Product List</h2>
+
+<!-- Форма поиска -->
+<div class="mb-3">
+    <div class="input-group">
+        <input type="text" id="search-input" class="form-control" placeholder="Enter product name" />
+        <button id="search-btn" class="btn btn-primary">Search</button>
+        <button id="reset-btn" class="btn btn-secondary">Reset</button>
+    </div>
+</div>
+
+<div id="product-table-container">
+    @await Html.PartialAsync("ProductTablePartial", Model)
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" id="create-btn">
+    Create New
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="add-modal-label" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-caption">Add Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group-prepend">
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Name</span>
+                        <input type="text" class="form-control" id="modal-name-txt" aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Description</span>
+                        <input type="text" class="form-control" id="modal-dsc-txt" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+
+                <span id="modal-error-msg"></span>
+                <div class="modal-footer">
+                    <button type="button" id="modal-apply-btn" class="btn btn-primary">Apply</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-close-btn">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
